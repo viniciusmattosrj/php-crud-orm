@@ -18,7 +18,7 @@ class PessoaDao {
 
     public function update(Pessoa $p) 
     {
-    
+        Pessoa::find($p->codigo)->update_attributes($p->to_array());
     }
 
 

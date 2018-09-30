@@ -7,9 +7,9 @@ use App\Model\PessoaDao;
 
 $pessoa = new Pessoa();
 $pessoa->codigo = 5;
-$pessoa->nome = 'ORM';
-$pessoa->idade = 23;
+$pessoa->nome   = 'ORM2';
+$pessoa->idade  = 25;
 
-PessoaDao::create($pessoa);
+PessoaDao::update($pessoa);
 
 
