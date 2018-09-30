@@ -1,19 +1,11 @@
 {
-    "name": "vinicius/php-crud",
-    "authors": [
-        {
-            "name": "vinicius",
-            "email": "vinimattos.rj@gmail.com"
-        }        
-    ],
-    "require":{
-        "monolog/monolog": "1.0.*",
-        "nesbot/carbon": "^1.21"
-    },
     "autoload":{
         "psr-4": {
             "App\\":"App/"
         }
         
-    } 
+    },
+    "require": {
+        "php-activerecord/php-activerecord": "^1.2"
+    }
 }

@@ -2,37 +2,9 @@
 
 namespace App\Model;
 
-class Pessoa
+use ActiveRecord\Model;
+
+class Pessoa extends Model
 {
-    private $codigo, $nome, $idade;
-
-    public function getCodigo()
-    {
-        return $this->codigo;   
-    }
-
-    public function setCodigo($codigo)
-    {
-        $this->codigo = $codigo;
-    }
-
-    public function getNome()
-    {
-        return $this->nome;   
-    }
-
-    public function setNome($nome)
-    {
-        $this->nome = $nome;
-    }
-
-    public function getIdade()
-    {
-        return $this->idade;   
-    }    
-
-    public function setIdade($idade)
-    {
-        $this->idade = $idade;
-    }    
+    static $table_name = 'pessoa';
 }
