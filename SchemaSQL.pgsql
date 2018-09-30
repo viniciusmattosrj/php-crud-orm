@@ -1,9 +1,9 @@
 
 SELECT * FROM pessoa;
 
-INSERT INTO pessoa(codigo, nome, idade) VALUES(1, 'Vinicius', 30);
+INSERT INTO pessoa(nome, idade) VALUES('Vinicius', 30);
 
-INSERT INTO pessoa(codigo, nome, idade) VALUES(2, 'Fernanda', 29);
+INSERT INTO pessoa(nome, idade) VALUES('Fernanda', 29);
 
 CREATE USER vinicius WITH PASSWORD '123456A';
 
@@ -14,13 +14,17 @@ CREATE DATABASE phpcrudorm;
 GRANT ALL PRIVILEGES ON DATABASE phpcrudorm to vinicius;
 
 CREATE TABLE pessoa(
-    codigo INT        NOT NULL,
+    codigo serial     NOT NULL,
     nome varchar (20) NOT NULL,
     idade INT         NOT NULL,
     PRIMARY KEY (codigo)
 );
 
+/* Apagando database */
 DROP DATABASE phpcrudorm;
+
+/* Limpando as informações */
+DELETE DATABASE phpcrudorm;
 
 ALTER ROLE vinicius WITH PASSWORD '123456A';
 
