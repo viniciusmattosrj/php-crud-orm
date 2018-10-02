@@ -7,6 +7,12 @@ INSERT INTO pessoa(nome, idade) VALUES('Fernanda', 29);
 
 CREATE USER vinicius WITH PASSWORD '123456A';
 
+/* Alterando permissões */
+ALTER ROLE vinicius WITH PASSWORD '123456A';
+
+/* Alterando permissões DB */
+ALTER ROLE vinicius CREATEROLE CREATEDB;
+
 DROP USER vinicius;-- remove a database role
 
 CREATE DATABASE phpcrudorm;
@@ -25,7 +31,3 @@ DROP DATABASE phpcrudorm;
 
 /* Limpando as informações */
 DELETE DATABASE phpcrudorm;
-
-ALTER ROLE vinicius WITH PASSWORD '123456A';
-
-ALTER ROLE vinicius CREATEROLE CREATEDB;
