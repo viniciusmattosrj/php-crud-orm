@@ -42,7 +42,7 @@ php -S 10.11.0.2:8008 -t public
 
 No browser digite http://10.11.0.2:8008
 
-- Para o acesso no MYSQL database administration tool, use http://localhost:8080 e use as credênciais abaixo:
+Para o acesso no MYSQL database administration tool, use http://localhost:8080 e use as credênciais abaixo:
 
   - server:
   - username:
