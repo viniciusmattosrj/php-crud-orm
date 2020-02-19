@@ -1,5 +1,6 @@
 # PHP Crud ORM Doctrine
 
+Conceitos de mapeamento objeto-relacional para acesso a dados em bancos relacionais, utilizando a linguagem PHP. Para exemplificar, eu apresento os passos de instalação e um CRUD com o ORM PHP Active Record
 - <a href="https://www.youtube.com/watch?v=uEcpmr0hBW8&t=1s">Conceitos de ORMs para PHP utilizando o Active Record ORM</a> - Professor Binho 
 
 
@@ -14,7 +15,7 @@ Install <a href="https://docs.docker.com/compose/install/">docker-compose</a>
 
  - PHP >= 7.1
  - Docker
- - Postgres >= 9.4 ou Mysql >= 5.6
+ - Postgres >= 9.4 ou Mysql >= 5.7
 
 
 ## Instalação
