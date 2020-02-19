@@ -48,7 +48,7 @@ Criando banco dados postgres:
 
 ```
 docker exec -it postgres bash
-psql -U webadm -c "CREATE DATABASE php_ajax;"
+psql -U webadm -c "CREATE DATABASE php_orm_crud;"
 ```
 
 Realizando a importação dump sql para a base criada:
