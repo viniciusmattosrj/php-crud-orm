@@ -1,4 +1,4 @@
-# PHP Crud ORM Doctrine
+# Sobre o Projeto
 
 Conceitos de mapeamento objeto-relacional para acesso a dados em bancos relacionais, utilizando a linguagem PHP. Para exemplificar, eu apresento os passos de instalação e um CRUD com o ORM PHP Active Record
 - <a href="https://www.youtube.com/watch?v=uEcpmr0hBW8&t=1s">Conceitos de ORMs para PHP utilizando o Active Record ORM</a> - Professor Binho 
@@ -12,13 +12,28 @@ Conceitos de mapeamento objeto-relacional para acesso a dados em bancos relacion
 
 - PHP >= 7.1
 
-- Postgres >= 9.4 ou Mysql >= 5.7
+- Postgres >= 9.6 ou Mysql >= 5.7
 
 
 ## Instalação
-Realizar o git clone do projeto
+Realizar o git clone do projeto base para o funcionamento da sua rede docker:
 ```bash
-git@github.com:viniciusmattosrj/php-crud-orm.git
+git@github.com:viniciusmattosrj/projetos.git
+```
+
+Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
+```
+git config core.fileMode false
+```
+
+Agora suba o servidor:
+```
+docker-compose up -d
+```
+
+Navege até dentro da pasta projetos e realize o git clone do projeto
+```bash
+cd projetos && git@github.com:viniciusmattosrj/php-crud-orm.git
 ```
 
 Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
@@ -48,17 +63,17 @@ Criando banco dados postgres:
 
 ```
 docker exec -it postgres bash
-psql -U webadm -c "CREATE DATABASE php_orm_crud;"
+psql -U webadm -c "CREATE DATABASE php_crud_orm";
 ```
 
 Realizando a importação dump sql para a base criada:
 ```
-psql -U webadm php_ajax < /var/lib/postgresql/sqlscript/php_orm_crud.pgsql
+psql -U webadm php_crud_orm < /var/lib/postgresql/sqlscript/php_crud_orm.pgsql
 ```
 
 Para o acesso no <strong>POSTGRES</strong> database administration tool, use http://localhost:5050 e use as credênciais abaixo:
 
-  - server:
+  - server: 10.11.0.2
   - username:
   - password:
 
@@ -67,17 +82,17 @@ Criando banco dados postgres:
 
 ```
 docker exec -it mysql bash
-mysql -u root -c "CREATE DATABASE php_orm_crud;"
+mysql -u root -c "CREATE DATABASE php_crud_orm;";
 ```
 
 Realizando a importação dump sql para a base criada:
 ```
-mysql -u root -p php_orm_crud < /var/lib/mysql57/php_orm_crud.sql
+mysql -u root -p php_crud_orm < /var/lib/mysql57/php_crud_orm.sql
 ```
 
 Para o acesso no <strong>MYSQL</strong> database administration tool, use http://localhost:8080 e use as credênciais abaixo:
 
-  - server:
+  - server: 10.11.0.3
   - username:
   - password:
 
